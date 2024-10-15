@@ -23,6 +23,9 @@ def manifest(request):
     except json.JSONDecodeError:
         # Si hay un error en el formato del JSON, devuelve un error 500
         return HttpResponse("Error al decodificar manifest.json", status=500)
+    
+def serviceworker(request):
+    return render(request, "principal/serviceworker.js", {}, content_type="text/javascript")
 
 # Create your views here.
 def index(request):
