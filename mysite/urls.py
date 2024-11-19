@@ -25,6 +25,7 @@ urlpatterns = [
     path("", views.index),
      path('manifest.json', views.manifest, name='manifest'),
      path('serviceworker.js', views.serviceworker),
+    path('tasks/', include('todolist.urls')),
 ]
 
 if settings.DEBUG:
